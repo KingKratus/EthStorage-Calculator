@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto programadorBR</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>```html
+
+<html>
+
+<head>
+
+<style>
+
+  body {
+
+    font-family: Arial;
+
+    margin: 20px;
+
+  }
+
+  input {
+
+    width: 100px;
+
+    margin: 10px;
+
+  }
+
+  button {
+
+    margin: 10px;
+
+    padding: 5px;
+
+    background-color: lightblue;
+
+    border: none;
+
+    cursor: pointer;
+
+  }
+
+</style>
+
+<script>
+
+  function calculate() {
+
+    // get the input values
+
+    var size = document.getElementById("size").value; // in GB
+
+    var time = document.getElementById("time").value; // in days
+
+    var price = document.getElementById("price").value; // in USD
+
+    var rate = document.getElementById("rate").value; // in fraction
+
+    // validate the input values
+
+    if (size <= 0 || time <= 0 || price <= 0 || rate <= 0) {
+
+      alert("Please enter positive numbers.");
+
+      return;
+
+    }
+
+    // calculate the cost using the formula
+
+    var cost = size * time * price * rate;
+
+    // display the result
+
+    document.getElementById("result").innerHTML = "The cost is $" + cost.toFixed(2);
+
+    
+
+  }
+
+</script>
+
+</head>
+
+<body>
+
+<h1>EthStorage Galileo Calculator</h1>
+
+<p>Enter the following values:</p>
+
+<p>Size (GB): <input type="number" id="size" value="1"></p>
+
+<p>Time (days): <input type="number" id="time" value="30"></p>
+
+<p>Price of ETH (USD): <input type="number" id="price" value="1620"></p>
+
+<p>Storage rate (fraction): <input type="number" id="rate" value="0.01"></p>
+
+<button onclick="calculate()">Calculate</button>
+
+<p id="result"></p>
+
+</body>
+
+</html>
+
+```</body>
+</html>
